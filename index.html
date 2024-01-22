@@ -4,131 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RockPaperScissors</title>
-    <style>
-        body,html {
-             background-image: url(images/background.jpg);
-             height: 100%;
-            
-        }
-        div {  
-            display: flex;
-        }
-        .background {
-            height:100%;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-        .main-menu {
-            background-color: darkslategray;
-            height: 70%;
-            width: 70%;
-            margin-top: 10%;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-        }
-        .player-screen {
-            background-color:cadetblue;
-            width: 70%;
-            height: 60%;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            border-radius: 10px;
-        }
-        .options {
-            background-color:thistle;
-            width: 70%;
-            height: 18%;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            border-radius: 10px;
-        }
-        .you,.cpu {
-            background-color: aliceblue;
-            width: 30%;
-            height: 90%;
-            flex-direction: column;
-            align-items: center;
-        }
-        .youscore,.cpuscore {
-            background-color: aliceblue;
-            width: 15%;
-            height: 50%;
-            font-size:50px;
-            justify-content: center;
-            align-items:center;
-            font-family: sans-serif;
-            color:rgb(41, 136, 143);
-        }
-        .option {
-            background-color: transparent;
-            height: 50%;
-            width: 30%;
-            border-radius: 10%;
-            font-size:30px;
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            font-family: sans-serif;
-        }
-        .image,.imagein {
-            width: 100px;
-            height: 100px;
-            border-radius: 30px;
-        }
-        .image {
-            margin: 10px;
-        }
-        .innertext {
-            margin-top: 15%;
-            width: 70%;
-            height: 30%;
-            font-size: 50px;
-            font-family: sans-serif;
-        }
-        .rock {
-            background-color: rgb(90, 87, 78);
-        }
-        .paper {
-            background-color: white;
-        }
-        .scissors {
-            background-color: #a19d94;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="background">
         <div class="main-menu">
             <div class="player-screen">
-
                 <div class="you">
                     <div class="image">
-                        <img class="imagein" src="images/paper.jpg" alt="">
+                        <img class="imagein" id="imageyou" src="images/questionmark.jpg" alt="">
                     </div>
                     <div class="innertext you">YOU</div>
                 </div>
-
-                <div class="youscore">0</div>
-                
-                <div class="cpuscore">0</div>
+                <div id="youscore">0</div>
+                <div id="cpuscore">0</div>
                 <div class="cpu">
                     <div class="image">
-                        <img class="imagein" src="images/papercpu.jpg" alt="">
+                        <img class="imagein" id="imagecpu" src="images/questionmark.jpg" alt="">
                     </div>
                     <div class="innertext cpu">CPU</div>
                 </div>
-
             </div>
             <div class="options">
-                <button class="option rock">Rock</button>
-                <button class="option paper">Paper</button>
-                <button class="option scissors">Scissors</button>
+                <button class="option" id="rock" data-value="0">Rock</button>
+                <button class="option" id="paper" data-value="1">Paper</button>
+                <button class="option" id="scissors" data-value="2">Scissors</button>
             </div>
         </div>
     </div>
+    <script src="rpsscript.js"></script>
 </body>
 </html>
